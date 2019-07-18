@@ -1,9 +1,11 @@
-# MolSSI | Geometry Analysis Project + Testing
+# MolSSI MolSSI Summer School 2019
+## Geometry Analysis Project + Testing
 
-## geom_analysis.py
+### geom_analysis.py
 
-This program takes the molecular coordinates from an input file and calculates the bond distances between all atoms. There is a built-in conditional that performs a soft bond check using specific distance cutoff criteria (0-1.5 $\mathring A$).
+This program takes the molecular coordinates from an input file and calculates the bond distances between all atoms. There is a built-in conditional that performs a soft bond check using specific distance cutoff criteria (0-1.5 \si{\angstrom}).
 
+The following is the contents of a water geometry input file.
 ```
 3
 Water xyz file
@@ -12,9 +14,16 @@ H1      -0.000000      0.001486     -0.003471
 H2       0.000000      0.931026      1.207929
 ```
 
-The code writes the calculated data into text file called water_distance_file.txt
+The code formats and writes the calculated bond lengths into a text file called distance_file.txt
 
-## test_geom_analysis.py
+Here are the results:
+
+```
+O - H1 | Atom Distance: 0.96900 Angstroms
+O - H2 | Atom Distance: 0.96900 Angstroms
+```
+
+### test_geom_analysis.py
 
 This program contains unit tests on the functions defined in geom_analysis.py
 

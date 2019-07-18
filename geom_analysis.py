@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
 # write H2O bond distances to file
 
-    water_distance_file = open(os.path.join('data', 'distance_file.txt'),'w+')
+    distance_file = open(os.path.join('data', 'distance_file.txt'),'w+')
 
 # let the number of atom labels = total number of atoms
 

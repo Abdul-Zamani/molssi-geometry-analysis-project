@@ -58,7 +58,7 @@ if __name__ == "__main__":
     atom_coordinates = water[0:,1:]
     #print(water)
     #print(atom_coordinates)
-    print('\n')
+    #print('\n')
 
     atom_coordinates = atom_coordinates.astype(np.float)
 

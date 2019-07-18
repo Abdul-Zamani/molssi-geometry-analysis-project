@@ -27,7 +27,7 @@ def calculate_distance(a1, a2):
     y_distance = a1[1] - a2[1]
     z_distance = a1[2] - a2[2]
     distance = np.sqrt(x_distance**2 + y_distance**2 + z_distance**2)
-    
+
     return distance
 
 # end function definitions
@@ -44,14 +44,14 @@ if __name__ == "__main__":
         print('Filename not specified. Please try again.')
         exit()
 
-# specify cmd line argument for input file 
+# specify cmd line argument for input file
 
     xyzfilename = sys.argv[1]
 
     water_file = os.path.join('data', xyzfilename) #dont need to type out entire directory
     print(water_file)
 
-    water = np.genfromtxt(fname=water_file,skip_header=2, dtype='unicode') 
+    water = np.genfromtxt(fname=water_file,skip_header=2, dtype='unicode')
     #help(np.genfromtxt)
     atom_labels = water[0:,0]
     print(atom_labels)
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     atom_coordinates = atom_coordinates.astype(np.float)
 
 # write H2O bond distances to file
-    
+
     water_distance_file = open(os.path.join('data', 'water_distance_file.txt'),'w+')
 
 # let the number of atom labels = total number of atoms
@@ -77,12 +77,12 @@ if __name__ == "__main__":
         for j in range(i+1,num_atoms):
             distance_2atoms = calculate_distance(atom_coordinates[i],atom_coordinates[j])
             if bond_check(distance_2atoms):
-              
+
                 print(F' {atom_labels[i]} - {atom_labels[j]} | Atom Distance: {distance_2atoms:.5f} Angstroms')
-                water_distance_file.write(F'{atom_labels[i]} - {atom_labels[j]} | Atom Distance: {distance_2atoms:.5f} Angstroms \n')
+                distance_file.write(F'{atom_labels[i]} - {atom_labels[j]} | Atom Distance: {distance_2atoms:.5f} Angstroms \n')
 
 # close the file after writing
-            
+
     water_distance_file.close()
 
 #

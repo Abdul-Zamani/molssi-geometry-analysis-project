@@ -54,10 +54,10 @@ if __name__ == "__main__":
     water = np.genfromtxt(fname=water_file,skip_header=2, dtype='unicode')
     #help(np.genfromtxt)
     atom_labels = water[0:,0]
-    print(atom_labels)
+    #print(atom_labels)
     atom_coordinates = water[0:,1:]
-    print(water)
-    print(atom_coordinates)
+    #print(water)
+    #print(atom_coordinates)
     print('\n')
 
     atom_coordinates = atom_coordinates.astype(np.float)

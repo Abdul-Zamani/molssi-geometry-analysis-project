@@ -2,7 +2,7 @@
 
 ## geom_analysis.py
 
-This program takes the molecular coordinates from an input file and calculates the bond distances between all atoms. There is a built-in conditional that performs a soft bond check using specific distance cutoff criteria (0-1.5$\\AA$).
+This program takes the molecular coordinates from an input file and calculates the bond distances between all atoms. There is a built-in conditional that performs a soft bond check using specific distance cutoff criteria (0-1.5 \r{A}).
 
 ## test_geom_analysis.py
 

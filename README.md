@@ -14,11 +14,12 @@ H1      -0.000000      0.001486     -0.003471
 H2       0.000000      0.931026      1.207929
 ```
 
-The code formats and writes the calculated bond lengths to a text file called distance_file.txt
+The code formats and writes the calculated bond lengths and the total number of atoms to a text file called distance_file.txt
 
-Here are the results:
+Here are the results for water:
 
 ```
+Number of atoms in molecule: 3
 O - H1 | Atom Distance: 0.96900 Angstroms
 O - H2 | Atom Distance: 0.96900 Angstroms
 ```

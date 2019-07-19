@@ -11,7 +11,7 @@ import numpy as np
 import os
 import sys
 
-# begin functions definitions
+# begin function definitions
 
 # conditional for bond length thresholds
 def bond_check(d_2atm, min_d=0, max_d = 1.5):
